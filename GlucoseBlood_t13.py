@@ -25,7 +25,8 @@
 ##
 ## 7. uj valtozat, utf-8 illetve cp1250 konverziok ????
 ##
-## 8. 3 tablazat/3 het
+## 8. 5 tablazat/5 het  (0,1,2,3,4  het)
+##
 ##
 import string
 import xlwt
@@ -581,14 +582,9 @@ def ex_iras(begin_dat,listak):
                 cell_o= int(ido[0:2]) + 2
                 ws.write (17,cell_o,e1[3],style5)              
         if e1[1] == str_vasarnap:
-            ## vasarnap
-          #  print 'Vasarnap'
-           # print e1
-            ## ido=e1[0:2]
+                   
             ido=e1[2]
             if len(ido)> 0:
-               # ido[0:2]
-              #  print ido
                 cell_o= int(ido[0:2]) + 2  ### overrite vasarnap
                 try:
                     ws.write (20,cell_o,e1[3],style5)
